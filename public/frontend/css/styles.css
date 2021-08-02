@@ -453,8 +453,8 @@ input[type='checkbox'] {
 }
 
 .navbar .logo-image img {
-    width: 133px;
-	height: 32px;
+    width: 300px;
+	/* height: 32px; */
 }
 
 .navbar .logo-text {

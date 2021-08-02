@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\ServiceController;
@@ -18,11 +19,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-Route::get('/', function () {
-    return view('pages.index');
-});
 
 Route::get('/dashboard', [AuthController::class, 'show_dashboard']);
 Route::get('/admin', [AuthController::class, 'login_auth']);
@@ -66,3 +62,10 @@ Route::prefix('admin')->group(function () {
         Route::get('/status-success/{id}', [ContactController::class, 'status_success']);
     });
 });
+
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/price', [HomeController::class, 'price']);
+Route::get('/service', [HomeController::class, 'service']);
+Route::get('/service-detail/{slug}', [HomeController::class, 'service_detail']);
+Route::get('/post', [HomeController::class, 'post']);
+Route::get('/post-detail/{slug}', [HomeController::class, 'post_detail']);

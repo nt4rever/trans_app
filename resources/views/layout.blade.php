@@ -18,7 +18,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>Pavo Webpage Title</title>
+    <title>Dịch thuật Minh Tuệ</title>
     
     <!-- Styles -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -42,7 +42,7 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Pavo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="{{URL::asset('frontend/images/logo.svg')}}" alt="alternative"></a> 
+            <a class="navbar-brand logo-image" href="{{URL::to('/')}}"><img src="{{URL::asset('frontend/custom/nmt-logo.png')}}" alt="alternative"></a> 
 
             <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
                 <span class="navbar-toggler-icon"></span>
@@ -51,16 +51,19 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#header">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link page-scroll <?php if(isset($home)) echo "active" ?>" href="{{URL::to('/')}}">Trang chủ <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#features">Features</a>
+                        <a class="nav-link page-scroll <?php if(isset($service)) echo "active" ?>" href="{{URL::to('/service')}}">Dịch vụ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#details">Details</a>
+                        <a class="nav-link page-scroll <?php if(isset($price)) echo "active" ?>" href="{{URL::to('/price')}}">Báo giá</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+                        <a class="nav-link page-scroll <?php if(isset($post)) echo "active" ?>" href="{{URL::to('/post')}}">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll <?php if(isset($contact)) echo "active" ?>" href="">Liên hệ</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
@@ -72,16 +75,13 @@
                             <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
                         </div>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#download">Download</a>
-                    </li>
                 </ul>
                 <span class="nav-item app-store-icons">
                     <a href="#your-link">
-                        <i class="fab fa-apple"></i>
+                        <i class="fab">vi</i>
                     </a>
                     <a href="#your-link">
-                        <i class="fab fa-android"></i>
+                        <i class="fab">en</i>
                     </a>
                 </span>
             </div> <!-- end of navbar-collapse -->
@@ -96,14 +96,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h4>Pavo is a mobile application for marketing automation and you can reach the team at <a class="purple" href="mailto:email@domain.com">email@domain.com</a></h4>
+                    <h4>Liên hệ với chúng tôi khi bạn cần hỗ trợ dịch thuật <a class="purple" href="mailto:email@domain.com">email@domain.com</a></h4>
                     <div class="social-container">
                         <span class="fa-stack">
                             <a href="#your-link">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-facebook-f fa-stack-1x"></i>
                             </a>
-                        </span>
+                        </span> 
                         <span class="fa-stack">
                             <a href="#your-link">
                                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -148,7 +148,7 @@
                     </ul>
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
-                    <p class="p-small statement">Copyright © <a href="#your-link">Your name</a></p>
+                    <p class="p-small statement">Copyright © <a href="#your-link">Văn phòng dịch thuật Minh Tuệ</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
