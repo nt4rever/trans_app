@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File;
 
 class UploadController extends Controller
 {
@@ -34,5 +35,15 @@ class UploadController extends Controller
             'fileNames' => $fileNames
         );
         return view('admin.images.file_browser')->with($data);
+    }
+
+    public function ckeditor_delete(Request $request)
+    {
+        $path = $request->path;
+        if (File::exists($path)) {
+            File::delete($path);
+            return true;
+        }
+        return false;
     }
 }

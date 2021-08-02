@@ -229,7 +229,7 @@
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item menu-open">
-                            <a href="/dashboard" class="nav-link active">
+                            <a href="{{URL::to('/dashboard')}}" class="nav-link active">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -262,13 +262,13 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{URL::to('admin/price/show')}}" class="nav-link">
                                 <i class="fas fa-hand-holding-usd nav-icon"></i>
                                 <p>Báo giá</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="{{URL::to('/admin/contact/index')}}" class="nav-link">
                                 <i class="fas fa-list-ol nav-icon"></i>
                                 <p>Liên hệ</p>
                             </a>
@@ -308,13 +308,13 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{URL::to('/admin/post/create')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Thêm tin tức</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{URL::to('/admin/post/index')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Danh sách tin tức</p>
                                     </a>

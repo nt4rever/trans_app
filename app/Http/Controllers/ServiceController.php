@@ -155,7 +155,8 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        $service = Service::find($id);
+        $this->AuthLogin();
+        $service = Service::findOrFail($id);
         $img = $service->service_image;
         $image_path = "uploads/service/" . $img;
         if (File::exists($image_path)) {
