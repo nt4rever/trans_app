@@ -71,7 +71,8 @@ class HomeController extends Controller
         $contact->contact_desc = $request->contact_desc;
         $contact->contact_content = $request->contact_content;
         $contact->save();
-        echo "Success";
+        $service = Service::paginate(9);
+        return view('pages.contact_success',compact('service'))->with('customer_name',$request->contact_name);
     }
 
     public function about()
