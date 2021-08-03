@@ -59,7 +59,7 @@ class PostController extends Controller
             'post_status' => 'required',
             'post_image' => 'required',
         ]);
-        $post = new post();
+        $post = new Post();
         $post->post_name = $request->post_name;
         $post->post_desc = $request->post_desc;
         $post->post_content = $request->post_content;

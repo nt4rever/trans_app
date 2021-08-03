@@ -22,17 +22,17 @@
                         <img src="{{ URL::asset('uploads/service/' . $item->service_image) }}" style="width: 100%" alt="">
                     </div> <!-- end of col -->
                     <div class="col-xl-9">
-                        <a href="{{ URL::to('/service-detail/' . $item->service_slug) }}">
+                        <a href="{{ URL::to('/service-detail/' . $item->service_slug) }}" class="post">
                             <h4>{{ $item->service_name }}</h4>
                         </a>
                         <p>{!! $item->service_desc !!}</p>
-                        <a href="{{ URL::to('/service-detail/' . $item->service_slug) }}"><button class="btn btn-primary">Đọc
+                        <a href="{{ URL::to('/service-detail/' . $item->service_slug) }}"><button class="btn btn-sm btn-outline-secondary">Đọc
                                 tiếp </button></a>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
                 <hr class="mb-5">
             @endforeach
-
+            {!! $service->render('vendor.pagination.index') !!}
         </div> <!-- end of container -->
     </div> <!-- end of ex-basic-1 -->
     <!-- end of basic -->

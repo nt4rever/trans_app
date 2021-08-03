@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                    <h1>{{$service->service_name}}</h1>
+                    <h1>{{$library->name}}</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
-                     {!!$service->service_content!!}
+                     {!!$library->content!!}
                     <a class="btn-solid-reg mt-5 mb-5" href="{{URL::to('/contact')}}">Liên hệ</a>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->

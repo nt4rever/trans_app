@@ -28,7 +28,8 @@
     <link href="{{URL::asset('frontend/css/swiper.css')}}" rel="stylesheet">
 	<link href="{{URL::asset('frontend/css/magnific-popup.css')}}" rel="stylesheet">
 	<link href="{{URL::asset('frontend/css/styles.css')}}" rel="stylesheet">
-	
+    <link href="{{URL::asset('frontend/css/custom.css')}}" rel="stylesheet">
+	<script src="{{ URL::asset('ckeditor/ckeditor.js') }}"></script>
 	<!-- Favicon  -->
     <link rel="icon" href="{{URL::asset("frontend/images/favicon.png")}}">
 </head>
@@ -63,16 +64,14 @@
                         <a class="nav-link page-scroll <?php if(isset($post)) echo "active" ?>" href="{{URL::to('/post')}}">Tin tức</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link page-scroll <?php if(isset($contact)) echo "active" ?>" href="">Liên hệ</a>
+                        <a class="nav-link page-scroll <?php if(isset($contact)) echo "active" ?>" href="{{URL::to('/contact')}}">Liên hệ</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Drop</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Khác</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item page-scroll" href="article.html">Article Details</a>
+                            <a class="dropdown-item page-scroll" href="{{URL::to('/library')}}">Thư viện</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="terms.html">Terms Conditions</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="privacy.html">Privacy Policy</a>
+                            <a class="dropdown-item page-scroll" href="{{URL::to('/about')}}">Giới thiệu</a>
                         </div>
                     </li>
                 </ul>
@@ -163,5 +162,6 @@
     <script src="{{URL::asset('frontend/js/swiper.min.js')}}"></script> <!-- Swiper for image and text sliders -->
     <script src="{{URL::asset('frontend/js/jquery.magnific-popup.js')}}"></script> <!-- Magnific Popup for lightboxes -->
     <script src="{{URL::asset('frontend/js/scripts.js')}}"></script> <!-- Custom scripts -->
+    @stack('custom-scripts')
 </body>
 </html>

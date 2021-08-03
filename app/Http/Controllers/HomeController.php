@@ -2,16 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
+use App\Models\Library;
 use App\Models\Post;
 use App\Models\Price;
 use App\Models\Service;
+use App\Rules\Captcha;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('pages.index')->with('home', 'active');
+        $service_index = Service::orderBy('service_order', 'asc')->limit(3)->get();
+        return view('pages.index', compact('service_index'))->with('home', 'active');
     }
 
     public function price()
@@ -22,7 +26,7 @@ class HomeController extends Controller
 
     public function service()
     {
-        $service = Service::all();
+        $service = Service::paginate(9);
         return view('pages.service')->with('service', $service);
     }
 
@@ -34,7 +38,7 @@ class HomeController extends Controller
 
     public function post()
     {
-        $post = Post::all();
+        $post = Post::paginate(9);
         return view('pages.post')->with('post', $post);
     }
 
@@ -42,5 +46,48 @@ class HomeController extends Controller
     {
         $post = Post::where('post_slug', $slug)->firstOrFail();
         return view('pages.post_detail')->with('post', $post);
+    }
+
+    public function contact()
+    {
+        return view('pages.contact')->with('contact', 'active');
+    }
+
+    public function send_contact(Request $request)
+    {
+        $this->validate($request, [
+            'contact_email'  => 'required|email|max:50',
+            'contact_phone' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
+            'contact_address' => 'required|max:255',
+            'contact_name' => 'required|max:255',
+            'g-recaptcha-response' => new Captcha(),
+        ]);
+
+        $contact = new Contact();
+        $contact->contact_name = $request->contact_name;
+        $contact->contact_phone = $request->contact_phone;
+        $contact->contact_email = $request->contact_email;
+        $contact->contact_address = $request->contact_address;
+        $contact->contact_desc = $request->contact_desc;
+        $contact->contact_content = $request->contact_content;
+        $contact->save();
+        echo "Success";
+    }
+
+    public function about()
+    {
+        return view('pages.about');
+    }
+
+    public function library()
+    {
+        $library = Library::paginate(9);
+        return view('pages.library')->with('library', $library);
+    }
+
+    public function library_detail($slug)
+    {
+        $library = Library::where('slug', $slug)->firstOrFail();
+        return view('pages.library_detail')->with('library', $library);
     }
 }

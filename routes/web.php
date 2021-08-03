@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LibraryController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\ServiceController;
@@ -61,6 +62,14 @@ Route::prefix('admin')->group(function () {
         Route::get('/status-pending/{id}', [ContactController::class, 'status_pending']);
         Route::get('/status-success/{id}', [ContactController::class, 'status_success']);
     });
+    Route::prefix('library')->group(function () {
+        Route::get('/index', [LibraryController::class, 'index']);
+        Route::get('/create', [LibraryController::class, 'create']);
+        Route::post('/store', [LibraryController::class, 'store']);
+        Route::get('/edit/{id}', [LibraryController::class, 'edit']);
+        Route::post('/update/{id}', [LibraryController::class, 'update']);
+        Route::get('/destroy/{id}', [LibraryController::class, 'destroy']);
+    });
 });
 
 Route::get('/', [HomeController::class, 'index']);
@@ -69,3 +78,9 @@ Route::get('/service', [HomeController::class, 'service']);
 Route::get('/service-detail/{slug}', [HomeController::class, 'service_detail']);
 Route::get('/post', [HomeController::class, 'post']);
 Route::get('/post-detail/{slug}', [HomeController::class, 'post_detail']);
+Route::get('/contact', [HomeController::class, 'contact']);
+Route::post('/send-contact', [HomeController::class, 'send_contact']);
+Route::get('/about', [HomeController::class, 'about']);
+Route::get('/library', [HomeController::class, 'library']);
+Route::get('/library', [HomeController::class, 'library']);
+Route::get('/library-detail/{slug}', [HomeController::class, 'library_detail']);

@@ -1,0 +1,7 @@
+a.post {
+    text-decoration: none;
+}
+
+a.post :hover {
+    color: #6b747b;
+}

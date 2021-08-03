@@ -10,8 +10,10 @@
                         <p class="p-large">Công ty chúng tôi đề cao sứ mệnh phục vụ khách hàng. Mọi nỗ lực của chúng tôi đều
                             hướng đến một mục đích duy nhất là đem đến cho khách hàng
                             các dịch vụ tốt hơn với chi phí ít hơn và nhiều ưu điểm vượt trội.</p>
-                        <a class="btn-solid-lg" href="#your-link"><i class="fab fa-pied-piper-hat"></i>Dịch vụ</a>
-                        <a class="btn-solid-lg secondary" href="#your-link"><i class="fab fa-facebook-messenger"></i>Liên hệ</a>
+                        <a class="btn-solid-lg popup-with-move-anim" href="#details-lightbox"><i
+                                class="fab fa-pied-piper-hat"></i>Dịch vụ</a>
+                        <a class="btn-solid-lg secondary" href="{{ URL::to('/contact') }}"><i
+                                class="fab fa-facebook-messenger"></i>Liên hệ</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
@@ -189,8 +191,8 @@
                                 <div class="media-body">Email: info@dichthuatmientrung.com.vn</div>
                             </li>
                         </ul>
-                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox">Liên hệ</a>
-                        <a class="btn-outline-reg" href="article.html">Dịch vụ</a>
+                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox">Dịch vụ</a>
+                        <a class="btn-outline-reg" href="{{ URL::to('/contact') }}">Liên hệ</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -211,37 +213,25 @@
                 </div> <!-- end of image-container -->
             </div> <!-- end of col -->
             <div class="col-lg-4">
-                <h3>Goals Setting</h3>
+                <h3>Dịch vụ dịch thuật</h3>
                 <hr>
-                <p>The app can easily help you track your personal development evolution if you take the time to set it up.
+                <p>
+                    Bậc thầy về ngôn ngữ, chất lượng vượt niềm tin.
                 </p>
-                <h4>User Feedback</h4>
-                <p>This is a great app which can help you save time and make your live easier. And it will help improve your
-                    productivity.</p>
                 <ul class="list-unstyled li-space-lg">
-                    <li class="media">
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="media-body">Splash screen panel</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="media-body">Statistics graph report</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="media-body">Events calendar layout</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="media-body">Location details screen</div>
-                    </li>
-                    <li class="media">
-                        <i class="fas fa-chevron-right"></i>
-                        <div class="media-body">Onboarding steps interface</div>
-                    </li>
+                    @foreach ($service_index as $item)
+                        <li class="media">
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="{{ URL::to('/service-detail/' . $item->service_slug) }}" target="_blank"
+                                rel="noopener noreferrer">
+                               
+                                <div class="media-body">{{ $item->service_name }}</div>
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
-                <a class="btn-solid-reg mfp-close page-scroll" href="#download">Download</a> <button
-                    class="btn-outline-reg mfp-close as-button" type="button">Back</button>
+                <a class="btn-solid-reg mfp-close page-scroll" href="{{URL::to('/contact')}}">Liên hệ</a> <button
+                    class="btn-outline-reg mfp-close as-button" type="button">Quay lại</button>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
     </div> <!-- end of lightbox-basic -->
@@ -571,8 +561,8 @@
                             <br>
                             Email: nmt.dichthuat@gmail.com
                         </p>
-                        <a class="btn-solid-lg" href="#your-link">Dịch vụ</a>
-                        <a class="btn-solid-lg secondary" href="#your-link"></i>Liên hệ</a>
+                        <a class="btn-solid-lg popup-with-move-anim" href="#details-lightbox">Dịch vụ</a>
+                        <a class="btn-solid-lg secondary" href="{{ URL::to('/contact') }}"></i>Liên hệ</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->

@@ -331,15 +331,15 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{URL::to('/admin/library/create')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Thêm tin tức</p>
+                                        <p>Thêm bài viết</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="{{URL::to('/admin/library/index')}}" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Danh sách tin tức</p>
+                                        <p>Danh sách bài viết</p>
                                     </a>
                                 </li>
                             </ul>

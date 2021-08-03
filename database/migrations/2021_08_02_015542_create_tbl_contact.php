@@ -20,7 +20,7 @@ class CreateTblContact extends Migration
             $table->string('contact_phone', 20);
             $table->string('contact_email', 50);
             $table->string('contact_desc')->nullable();
-            $table->string('contact_content')->nullable();
+            $table->text('contact_content')->nullable();
             $table->tinyInteger('contact_status')->default(0);
             $table->timestamps();
         });
