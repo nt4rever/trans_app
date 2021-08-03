@@ -9,6 +9,7 @@ use App\Http\Controllers\PriceController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UploadController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+URL::forceScheme('https');
 Route::get('/dashboard', [AuthController::class, 'show_dashboard']);
 Route::get('/admin', [AuthController::class, 'login_auth']);
 Route::get('/login-auth', [AuthController::class, 'login_auth']);
