@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Jobs\SendMailConfirm;
+use App\Mail\ConfirmMail;
 use App\Models\Contact;
 use App\Models\Library;
 use App\Models\Post;
@@ -9,6 +11,7 @@ use App\Models\Price;
 use App\Models\Service;
 use App\Rules\Captcha;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -72,11 +75,14 @@ class HomeController extends Controller
         $contact->contact_content = $request->contact_content;
         $contact->save();
         $service = Service::paginate(9);
+        $email  = new SendMailConfirm($request->contact_email);
+        dispatch($email);
         return view('pages.contact_success',compact('service'))->with('customer_name',$request->contact_name);
     }
 
     public function about()
     {
+
         return view('pages.about');
     }
 
