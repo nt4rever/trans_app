@@ -11,7 +11,7 @@
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
-                    <form role="form" action="{{ URL::to('/admin/service/update/'.$service->service_id) }}" method="post"
+                    <form role="form" action="{{ URL::to('/admin/service/update/' . $service->service_id) }}" method="post"
                         enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
@@ -77,9 +77,10 @@
             // instance, using default configuration.
             CKEDITOR.replace('service_desc');
             CKEDITOR.replace('service_content', {
-                filebrowserImageUploadUrl: "{{ url('uploads-ckeditor?_token=' . csrf_token()) }}",
-                filebrowserBrowseUrl: "{{ url('file-browser?_token=' . csrf_token()) }}",
-                filebrowserUploadMethod: "form"
+                filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+                filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+                filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
             });
         </script>
     @endpush

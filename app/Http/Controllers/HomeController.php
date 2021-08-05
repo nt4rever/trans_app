@@ -29,7 +29,7 @@ class HomeController extends Controller
 
     public function service()
     {
-        $service = Service::paginate(9);
+        $service = Service::orderBy('service_order', 'asc')->paginate(9);
         return view('pages.service')->with('service', $service);
     }
 
@@ -43,7 +43,7 @@ class HomeController extends Controller
 
     public function post()
     {
-        $post = Post::paginate(9);
+        $post = Post::orderBy('post_order', 'asc')->paginate(9);
         return view('pages.post')->with('post', $post);
     }
 
@@ -92,7 +92,7 @@ class HomeController extends Controller
 
     public function library()
     {
-        $library = Library::paginate(9);
+        $library = Library::orderBy('order', 'asc')->paginate(9);
         return view('pages.library')->with('library', $library);
     }
 

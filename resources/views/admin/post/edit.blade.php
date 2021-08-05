@@ -77,9 +77,10 @@
             // instance, using default configuration.
             CKEDITOR.replace('post_desc');
             CKEDITOR.replace('post_content', {
-                filebrowserImageUploadUrl: "{{ url('uploads-ckeditor?_token=' . csrf_token()) }}",
-                filebrowserBrowseUrl: "{{ url('file-browser?_token=' . csrf_token()) }}",
-                filebrowserUploadMethod: "form"
+                filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
+                filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
+                filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
+                filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
             });
         </script>
     @endpush

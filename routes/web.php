@@ -35,6 +35,10 @@ Route::post('/uploads-ckeditor', [UploadController::class, 'ckeditor_image']);
 Route::get('/file-browser', [UploadController::class, 'ckeditor_browser']);
 Route::get('/delete-image-ckeditor', [UploadController::class, 'ckeditor_delete']);
 
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
+
 Route::prefix('admin')->group(function () {
     Route::get('/change-quantity-view/{value}', [AuthController::class,'change_quantity_view']);
     Route::prefix('service')->group(function () {

@@ -345,46 +345,23 @@
                                 </li>
                             </ul>
                         </li>
-                        {{-- <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="nav-icon fas fa-address-card"></i>
+                        <li class="nav-header">FILE MANAGER</li>
+                        <li class="nav-item">
+                            <a href="{{URL::to('laravel-filemanager?type=Files')}}" target="_blank" class="nav-link">
+                                <i class="nav-icon fas fa-file"></i>
                                 <p>
-                                    Giới thiệu
-                                    <i class="fas fa-angle-left right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Thêm bài giới thiệu</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">
-                                        <i class="far fa-circle nav-icon"></i>
-                                        <p>Danh sách bài giới thiệu</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li> --}}
-                        {{-- <li class="nav-item">
-                            <a href="pages/calendar.html" class="nav-link">
-                                <i class="nav-icon far fa-calendar-alt"></i>
-                                <p>
-                                    Calendar
-                                    <span class="badge badge-info right">2</span>
+                                    Quản lý file
                                 </p>
                             </a>
                         </li>
                         
 
                         <li class="nav-item">
-                            <a href="https://adminlte.io/docs/3.1/" class="nav-link">
-                                <i class="nav-icon fas fa-file"></i>
-                                <p>Documentation</p>
+                            <a href="{{URL::to('laravel-filemanager?type=Images')}}" target="_blank" class="nav-link">
+                                <i class="nav-icon fas fa-image"></i>
+                                <p>Quản lý ảnh</p>
                             </a>
-                        </li> --}}
+                        </li>
 
                         <li class="nav-header">ACCOUNT</li>
                         <li class="nav-item">
