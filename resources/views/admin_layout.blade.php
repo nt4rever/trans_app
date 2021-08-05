@@ -33,7 +33,8 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-
+        @csrf
+        <input type="hidden" name="my_url" value="{{ url('') }}">
         <!-- Preloader -->
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="{{ URL::asset('backend/dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo"
@@ -344,7 +345,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-address-card"></i>
                                 <p>
@@ -366,7 +367,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> --}}
                         {{-- <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
                                 <i class="nav-icon far fa-calendar-alt"></i>

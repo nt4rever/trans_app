@@ -28,6 +28,6 @@ class ConfirmMail extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.thank');
+        return $this->subject("Văn phòng dịch thuật Minh Tuệ")->view('mail.thank');
     }
 }

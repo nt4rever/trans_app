@@ -36,6 +36,7 @@ Route::get('/file-browser', [UploadController::class, 'ckeditor_browser']);
 Route::get('/delete-image-ckeditor', [UploadController::class, 'ckeditor_delete']);
 
 Route::prefix('admin')->group(function () {
+    Route::get('/change-quantity-view/{value}', [AuthController::class,'change_quantity_view']);
     Route::prefix('service')->group(function () {
         Route::get('/index', [ServiceController::class, 'index']);
         Route::get('/create', [ServiceController::class, 'create']);
@@ -43,6 +44,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{id}', [ServiceController::class, 'edit']);
         Route::post('/update/{id}', [ServiceController::class, 'update']);
         Route::get('/destroy/{id}', [ServiceController::class, 'destroy']);
+        Route::post('/arrange-service', [ServiceController::class, 'arrange_service']);
     });
     Route::prefix('price')->group(function () {
         Route::get('/show', [PriceController::class, 'show']);
@@ -55,6 +57,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{id}', [PostController::class, 'edit']);
         Route::post('/update/{id}', [PostController::class, 'update']);
         Route::get('/destroy/{id}', [PostController::class, 'destroy']);
+        Route::post('/arrange-post', [PostController::class, 'arrange_post']);
     });
     Route::prefix('contact')->group(function () {
         Route::get('/index', [ContactController::class, 'index']);
@@ -70,6 +73,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/edit/{id}', [LibraryController::class, 'edit']);
         Route::post('/update/{id}', [LibraryController::class, 'update']);
         Route::get('/destroy/{id}', [LibraryController::class, 'destroy']);
+        Route::post('/arrange-library', [LibraryController::class, 'arrange_library']);
     });
 });
 

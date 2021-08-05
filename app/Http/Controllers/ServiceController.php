@@ -28,7 +28,8 @@ class ServiceController extends Controller
     public function index()
     {
         $this->AuthLogin();
-        $all_service = Service::orderBy('service_id', 'desc')->paginate(9);
+        $quantity_view = Session::get('admin_quantity_view', 9);
+        $all_service = Service::orderBy('service_order', 'asc')->paginate($quantity_view);
         return view('admin.service.index', compact('all_service'));
     }
 
@@ -165,5 +166,17 @@ class ServiceController extends Controller
         $service->delete();
         Session::flash('message', 'Xoá thành công!');
         return Redirect::to('/admin/service/index');
+    }
+
+    public function arrange_service(Request $request)
+    {
+        $this->AuthLogin();
+        $page_id_array = $request->page_id_array;
+        foreach ($page_id_array as $key => $value) {
+            $service = Service::find($value);
+            $service->service_order = $key;
+            $service->save();
+        }
+        echo "true";
     }
 }

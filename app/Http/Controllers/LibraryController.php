@@ -28,7 +28,8 @@ class LibraryController extends Controller
     public function index()
     {
         $this->AuthLogin();
-        $all_library = Library::orderBy('id', 'desc')->paginate(9);
+        $quantity_view = Session::get('admin_quantity_view', 9);
+        $all_library = Library::orderBy('order', 'asc')->paginate($quantity_view);
         return view('admin.library.index', compact('all_library'));
     }
 
@@ -165,5 +166,17 @@ class LibraryController extends Controller
         $library->delete();
         Session::flash('message', 'Xoá thành công!');
         return Redirect::to('/admin/library/index');
+    }
+
+    public function arrange_library(Request $request)
+    {
+        $this->AuthLogin();
+        $page_id_array = $request->page_id_array;
+        foreach ($page_id_array as $key => $value) {
+            $library = Library::find($value);
+            $library->order = $key;
+            $library->save();
+        }
+        echo "true";
     }
 }

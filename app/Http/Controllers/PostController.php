@@ -28,7 +28,8 @@ class PostController extends Controller
     public function index()
     {
         $this->AuthLogin();
-        $all_post = Post::orderBy('post_id', 'desc')->paginate(9);
+        $quantity_view = Session::get('admin_quantity_view', 9);
+        $all_post = Post::orderBy('post_order', 'asc')->paginate($quantity_view);
         return view('admin.post.index', compact('all_post'));
     }
 
@@ -165,5 +166,17 @@ class PostController extends Controller
         $post->delete();
         Session::flash('message', 'Xoá thành công!');
         return Redirect::to('/admin/post/index');
+    }
+
+    public function arrange_post(Request $request)
+    {
+        $this->AuthLogin();
+        $page_id_array = $request->page_id_array;
+        foreach ($page_id_array as $key => $value) {
+            $post = Post::find($value);
+            $post->post_order = $key;
+            $post->save();
+        }
+        echo "true";
     }
 }

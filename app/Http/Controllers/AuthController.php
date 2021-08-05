@@ -72,4 +72,13 @@ class AuthController extends Controller
         $user = User::create(request(['name', 'email', 'password']));
         return redirect()->to('/login-auth');
     }
+
+    public function change_quantity_view($value)
+    {
+        $this->AuthLogin();
+        if(is_numeric($value)){
+            Session::put('admin_quantity_view', $value);
+        }
+        return redirect()->back();
+    }
 }

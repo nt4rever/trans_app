@@ -36,6 +36,8 @@ class HomeController extends Controller
     public function service_detail($slug)
     {
         $service = Service::where('service_slug', $slug)->firstOrFail();
+        $service->service_view_count = $service->service_view_count + 1;
+        $service->save();
         return view('pages.service_detail')->with('service', $service);
     }
 
@@ -48,6 +50,8 @@ class HomeController extends Controller
     public function post_detail($slug)
     {
         $post = Post::where('post_slug', $slug)->firstOrFail();
+        $post->post_view_count = $post->post_view_count + 1;
+        $post->save();
         return view('pages.post_detail')->with('post', $post);
     }
 
@@ -77,7 +81,7 @@ class HomeController extends Controller
         $service = Service::paginate(9);
         $email  = new SendMailConfirm($request->contact_email);
         dispatch($email);
-        return view('pages.contact_success',compact('service'))->with('customer_name',$request->contact_name);
+        return view('pages.contact_success', compact('service'))->with('customer_name', $request->contact_name);
     }
 
     public function about()
@@ -95,6 +99,8 @@ class HomeController extends Controller
     public function library_detail($slug)
     {
         $library = Library::where('slug', $slug)->firstOrFail();
+        $library->view_count =  $library->view_count + 1;
+        $library->save();
         return view('pages.library_detail')->with('library', $library);
     }
 }

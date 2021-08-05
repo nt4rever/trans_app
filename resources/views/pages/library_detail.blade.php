@@ -6,6 +6,7 @@
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
                     <h1>{{$library->name}}</h1>
+                    <p>Thời gian đăng: {{ $library->created_at }} <br> Lượt xem: {{ $library->view_count }}</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->

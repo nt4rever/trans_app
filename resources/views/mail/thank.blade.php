@@ -246,7 +246,7 @@
                                                 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px"><td style="padding-right: 20px;padding-left: 20px;" align="center"><![endif]-->
                                                 <div style="font-size:1px;line-height:20px"> </div><img align="center"
                                                     alt="Image" border="0" class="center autowidth"
-                                                    src="https://lh3.googleusercontent.com/fife/AAWUweWNBfzhb3MFc9q2wyRkufqT6WSamT9fNagHUoFeR96_TpUMzrbom9RRmIhghGZoCsxiAv8v5sorDt82l-7etmPYISiIUCgkdMIzL_w3XrXBuFRcwKoSmBZ0sihlItYPk8o59sSq9ALqUaid-QNx-f9XXCiOm8kQCnM2p2jHqS1Y5maJMpp2VL_MuBNp31Bba0COPBxTUydmqW_zUYvyQStXaBCjN5J9MC_wgVVKbxMMOSzP1L7oF4_pXVco-WngeDvPqRonnxljN9-rsDh2tAvf76Exx9LUpiVFhpZvMKMoR2Xhvxyuw8G4-ns4rSHJZqNjwEISR4_2b7s6A_N1N-og8d1QXTB_dPRZbY1zZ1cPr__W4Qql88cQEu1ggQ3bT427E7h_jLX0lQlGmnSrk3L5dnSR_EHDvPh6JZ6RRBCM5nhbConArnNkmA6JAFb-5ez__6f79dhnTGN_5lbe3xhV_y4Ln_sgiR5zlj2Xwkyks3iPPW7BS-2OIEb8kcRMuGqgDz2EMlH02s51gROXTCkJZHCKtaOKCCM-8UASoTejkjL5RxSaDlFDupNHlSg6lJVobz8UBBImQQLQSbmMHypbkT2qnoscUYufF8tKP5m8kWYxRcMee8Ozp1Bso_EBF_uo_WUJaRWkTdP04U0zSDL2jiU3ckW_kTgzn6Hn5iY_d0oE45GGyWmc2QArJnPBZ1IC6eK7fPr-heg5eGt5SiGQtTNJGJHxaA=w1366-h657-ft"
+                                                    src="https://lh3.googleusercontent.com/fife/AAWUweXjxXVJib6VcUJ5_WMos83tquZNx6ekN4XmbLA5XgnUoZtGrjt-Wkb1OPuRuZq5_vKRSTkIf2aN1xcN1rWAdCbgpsMpm-BsZvjDHY6niIC7jMBCyO_inxUVYcEKT4bOXjCJZ4IymkNFQxz2iufUrAmC9GS1GVsDbfPu0t3-1G2uD83sg0n3E2aYqLOSN1_BeEDR1fFkIXo6-m-p9eAALNcAA9K89_RXJN9XYTLgTuuZaoo0VU4YgPzrRIt81szmSl-H0lyzUVzTDZVVln5a7X9303bQo1UYuVMXPmceTJ6On0QoCeGwcJlKtqeH_ZK0HiyGsXl0ZtGggkiro3sc7M3JUpueT8Ue5mPvPF-gnqvXI0T5t6hI4FmUHxB_SsmRXY44LZxWDxBCgj9Y5etrWsP-z_ipLKg4GkAQDAFkuLycqmYLWd8nLk11uEZ5QIeKzeCB-OVeMj-MSMjQoLV7q9onu9avd2pPEeddw0mKOnTw8JFYPRmbwW7kImOYWPFjAiEsXLuYWm58IonRbRCD03zEi_C3ufAIxL0_sPOC2QexopbnrQ94nHF_glTWSc_RZGoLitNsxEWuqqcrp5wqSlsFPNwUaIMwzTgFELcXgK3ckBo0YeNKqDsxxbXUzwY591wy9Xn6w7qfbB92KMW1fevGG7Ahfjaj5jyW02GxgBjJe27uiJ3pzQbfp0b7S37tLipayQ-a8tTBm4dUmxuHqLbI8KcXQOH4tQ=w1366-h657-ft"
                                                     style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 147px; max-width: 100%; display: block;"
                                                     title="Image" width="147" />
                                                 <div style="font-size:1px;line-height:20px"> </div>
@@ -342,8 +342,9 @@
                                                     style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; mso-line-height-alt: 14px;">
                                                     <p
                                                         style="margin: 0; font-size: 46px; line-height: 1.2; text-align: center; word-break: break-word; mso-line-height-alt: 55px; margin-top: 0; margin-bottom: 0;">
-                                                        <span style="font-size: 46px; color: #003188;"><strong>We
-                                                                Appreciate your feedback!</strong></span>
+                                                        <span style="font-size: 46px; color: #003188;"><strong>
+                                                            Chúng tôi đã nhận được liên hệ từ bạn!
+                                                        </strong></span>
                                                     </p>
                                                 </div>
                                             </div>
@@ -429,8 +430,8 @@
                                                     </p>
                                                     <p
                                                         style="margin: 0; line-height: 1.5; word-break: break-word; font-size: 16px; mso-line-height-alt: 24px; margin-top: 0; margin-bottom: 0;">
-                                                        <span style="font-size: 16px; color: #6d89bc;">Rob Charleston -
-                                                            Customer Support Manager</span>
+                                                        <span style="font-size: 16px; color: #6d89bc;">Nguyen Minh Tue -
+                                                            Manager</span>
                                                     </p>
                                                     <p
                                                         style="margin: 0; line-height: 1.5; word-break: break-word; mso-line-height-alt: 18px; margin-top: 0; margin-bottom: 0;">
@@ -516,7 +517,7 @@
                                                 <!--[if mso]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr style="line-height:0px"><td style="padding-right: 20px;padding-left: 20px;" align="center"><![endif]-->
                                                 <div style="font-size:1px;line-height:20px"> </div><img align="center"
                                                     alt="Image" border="0" class="center autowidth"
-                                                    src="https://lh3.googleusercontent.com/fife/AAWUweWNBfzhb3MFc9q2wyRkufqT6WSamT9fNagHUoFeR96_TpUMzrbom9RRmIhghGZoCsxiAv8v5sorDt82l-7etmPYISiIUCgkdMIzL_w3XrXBuFRcwKoSmBZ0sihlItYPk8o59sSq9ALqUaid-QNx-f9XXCiOm8kQCnM2p2jHqS1Y5maJMpp2VL_MuBNp31Bba0COPBxTUydmqW_zUYvyQStXaBCjN5J9MC_wgVVKbxMMOSzP1L7oF4_pXVco-WngeDvPqRonnxljN9-rsDh2tAvf76Exx9LUpiVFhpZvMKMoR2Xhvxyuw8G4-ns4rSHJZqNjwEISR4_2b7s6A_N1N-og8d1QXTB_dPRZbY1zZ1cPr__W4Qql88cQEu1ggQ3bT427E7h_jLX0lQlGmnSrk3L5dnSR_EHDvPh6JZ6RRBCM5nhbConArnNkmA6JAFb-5ez__6f79dhnTGN_5lbe3xhV_y4Ln_sgiR5zlj2Xwkyks3iPPW7BS-2OIEb8kcRMuGqgDz2EMlH02s51gROXTCkJZHCKtaOKCCM-8UASoTejkjL5RxSaDlFDupNHlSg6lJVobz8UBBImQQLQSbmMHypbkT2qnoscUYufF8tKP5m8kWYxRcMee8Ozp1Bso_EBF_uo_WUJaRWkTdP04U0zSDL2jiU3ckW_kTgzn6Hn5iY_d0oE45GGyWmc2QArJnPBZ1IC6eK7fPr-heg5eGt5SiGQtTNJGJHxaA=w1366-h657-ft"
+                                                    src="https://lh3.googleusercontent.com/fife/AAWUweXjxXVJib6VcUJ5_WMos83tquZNx6ekN4XmbLA5XgnUoZtGrjt-Wkb1OPuRuZq5_vKRSTkIf2aN1xcN1rWAdCbgpsMpm-BsZvjDHY6niIC7jMBCyO_inxUVYcEKT4bOXjCJZ4IymkNFQxz2iufUrAmC9GS1GVsDbfPu0t3-1G2uD83sg0n3E2aYqLOSN1_BeEDR1fFkIXo6-m-p9eAALNcAA9K89_RXJN9XYTLgTuuZaoo0VU4YgPzrRIt81szmSl-H0lyzUVzTDZVVln5a7X9303bQo1UYuVMXPmceTJ6On0QoCeGwcJlKtqeH_ZK0HiyGsXl0ZtGggkiro3sc7M3JUpueT8Ue5mPvPF-gnqvXI0T5t6hI4FmUHxB_SsmRXY44LZxWDxBCgj9Y5etrWsP-z_ipLKg4GkAQDAFkuLycqmYLWd8nLk11uEZ5QIeKzeCB-OVeMj-MSMjQoLV7q9onu9avd2pPEeddw0mKOnTw8JFYPRmbwW7kImOYWPFjAiEsXLuYWm58IonRbRCD03zEi_C3ufAIxL0_sPOC2QexopbnrQ94nHF_glTWSc_RZGoLitNsxEWuqqcrp5wqSlsFPNwUaIMwzTgFELcXgK3ckBo0YeNKqDsxxbXUzwY591wy9Xn6w7qfbB92KMW1fevGG7Ahfjaj5jyW02GxgBjJe27uiJ3pzQbfp0b7S37tLipayQ-a8tTBm4dUmxuHqLbI8KcXQOH4tQ=w1366-h657-ft"
                                                     style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: 0; width: 147px; max-width: 100%; display: block;"
                                                     title="Image" width="147" />
                                                 <div style="font-size:1px;line-height:15px"> </div>
@@ -695,19 +696,12 @@
                                                             valign="top">
                                                             <!--<![endif]-->
                                                             <tr style="vertical-align: top;" valign="top">
-                                                                <td align="center"
-                                                                    style="word-break: break-word; vertical-align: top; text-align: center; padding-top: 5px; padding-bottom: 5px; padding-left: 5px; padding-right: 6px;"
-                                                                    valign="top"><a
-                                                                        href="https://www.designedwithbee.com/"><img
-                                                                            align="center" alt="Designed with BEE"
-                                                                            class="icon" height="32"
-                                                                            src="images/bee.png" style="border:0;"
-                                                                            width="null" /></a></td>
                                                                 <td style="word-break: break-word; font-family: Trebuchet MS, Lucida Grande, Lucida Sans Unicode, Lucida Sans, Tahoma, sans-serif; font-size: 15px; color: #9d9d9d; vertical-align: middle; letter-spacing: undefined;"
                                                                     valign="middle"><a
-                                                                        href="https://www.designedwithbee.com/"
-                                                                        style="color:#9d9d9d;text-decoration:none;">Designed
-                                                                        with BEE</a></td>
+                                                                        href="https://dichthuatminhtue.herokuapp.com/"
+                                                                        style="color:#9d9d9d;text-decoration:none;">
+                                                                    Văn phòng dịch thuật Minh Tuệ
+                                                                    </a></td>
                                                             </tr>
                                                         </table>
                                                     </td>
