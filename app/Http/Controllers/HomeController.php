@@ -9,14 +9,25 @@ use App\Models\Library;
 use App\Models\Post;
 use App\Models\Price;
 use App\Models\Service;
+use App\Models\Visitor;
 use App\Rules\Captcha;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
+        $vistor = Visitor::where('ip', $request->ip())->first();
+        if (isset($vistor)) {
+            $vistor->count = $vistor->count + 1;
+            $vistor->save();
+        } else {
+            $vistor = new Visitor();
+            $vistor->count = 1;
+            $vistor->ip = $request->ip();
+            $vistor->save();
+        }
         $service_index = Service::orderBy('service_order', 'asc')->limit(3)->get();
         return view('pages.index', compact('service_index'))->with('home', 'active');
     }

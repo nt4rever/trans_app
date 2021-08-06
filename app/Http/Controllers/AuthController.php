@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\User;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -53,7 +55,11 @@ class AuthController extends Controller
     public function show_dashboard()
     {
         $this->AuthLogin();
-        return view('admin_layout');
+        $new_contact = Contact::where('contact_status', 0)->count();
+        $confirm_contact = Contact::where('contact_status', 1)->count();
+        $visitor = Visitor::all()->count();
+        $sum_vs = Visitor::all()->sum('count');
+        return view('admin.dashboard', compact('new_contact', 'confirm_contact','visitor','sum_vs'));
     }
 
     //register
@@ -76,7 +82,7 @@ class AuthController extends Controller
     public function change_quantity_view($value)
     {
         $this->AuthLogin();
-        if(is_numeric($value)){
+        if (is_numeric($value)) {
             Session::put('admin_quantity_view', $value);
         }
         return redirect()->back();

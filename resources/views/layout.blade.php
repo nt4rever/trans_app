@@ -58,46 +58,44 @@
                     <li class="nav-item">
                         <a class="nav-link page-scroll <?php if (isset($home)) {
     echo 'active';
-} ?>" href="{{ URL::to('/') }}">Trang chủ <span
+} ?>" href="{{ URL::to('/') }}">@lang('lang.home')<span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll <?php if (isset($service)) {
     echo 'active';
-} ?>" href="{{ URL::to('/service') }}">Dịch
-                            vụ</a>
+} ?>" href="{{ URL::to('/service') }}">@lang('lang.service')</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll <?php if (isset($price)) {
     echo 'active';
-} ?>" href="{{ URL::to('/price') }}">Báo giá</a>
+} ?>" href="{{ URL::to('/price') }}">@lang('lang.price')</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll <?php if (isset($post)) {
     echo 'active';
-} ?>" href="{{ URL::to('/post') }}">Tin tức</a>
+} ?>" href="{{ URL::to('/post') }}">@lang('lang.post')</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll <?php if (isset($contact)) {
     echo 'active';
-} ?>" href="{{ URL::to('/contact') }}">Liên
-                            hệ</a>
+} ?>" href="{{ URL::to('/contact') }}">@lang('lang.contact')</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Khác</a>
+                            aria-haspopup="true" aria-expanded="false">@lang('lang.other')</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item page-scroll" href="{{ URL::to('/library') }}">Thư viện</a>
+                            <a class="dropdown-item page-scroll" href="{{ URL::to('/library') }}">@lang('lang.library')</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item page-scroll" href="{{ URL::to('/about') }}">Giới thiệu</a>
+                            <a class="dropdown-item page-scroll" href="{{ URL::to('/about') }}">@lang('lang.about')</a>
                         </div>
                     </li>
                 </ul>
                 <span class="nav-item app-store-icons">
-                    <a href="#your-link">
+                    <a href="{{url('lang/vi')}}">
                         <i class="fab">vi</i>
                     </a>
-                    <a href="#your-link">
+                    <a href="{{url('lang/en')}}">
                         <i class="fab">en</i>
                     </a>
                 </span>

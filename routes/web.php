@@ -8,6 +8,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\PriceController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\VisitorController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\URL;
 
@@ -22,6 +23,13 @@ use Illuminate\Support\Facades\URL;
 |
 */
 URL::forceScheme('https');
+Route::get('lang/{locale}', function ($locale) {
+    if (!in_array($locale, ['vi', 'en'])) {
+        abort(404);
+    }
+    session()->put('locale', $locale);
+    return redirect()->back();
+});
 Route::get('/dashboard', [AuthController::class, 'show_dashboard']);
 Route::get('/admin', [AuthController::class, 'login_auth']);
 Route::get('/login-auth', [AuthController::class, 'login_auth']);
@@ -40,7 +48,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 });
 
 Route::prefix('admin')->group(function () {
-    Route::get('/change-quantity-view/{value}', [AuthController::class,'change_quantity_view']);
+    Route::get('/change-quantity-view/{value}', [AuthController::class, 'change_quantity_view']);
     Route::prefix('service')->group(function () {
         Route::get('/index', [ServiceController::class, 'index']);
         Route::get('/create', [ServiceController::class, 'create']);
@@ -79,6 +87,7 @@ Route::prefix('admin')->group(function () {
         Route::get('/destroy/{id}', [LibraryController::class, 'destroy']);
         Route::post('/arrange-library', [LibraryController::class, 'arrange_library']);
     });
+    Route::get('/visitor', [VisitorController::class, 'index']);
 });
 
 Route::get('/', [HomeController::class, 'index']);
@@ -90,6 +99,5 @@ Route::get('/post-detail/{slug}', [HomeController::class, 'post_detail']);
 Route::get('/contact', [HomeController::class, 'contact']);
 Route::post('/send-contact', [HomeController::class, 'send_contact']);
 Route::get('/about', [HomeController::class, 'about']);
-Route::get('/library', [HomeController::class, 'library']);
 Route::get('/library', [HomeController::class, 'library']);
 Route::get('/library-detail/{slug}', [HomeController::class, 'library_detail']);

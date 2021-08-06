@@ -365,6 +365,14 @@
 
                         <li class="nav-header">ACCOUNT</li>
                         <li class="nav-item">
+                            <a href="{{URL::to('admin/visitor')}}" class="nav-link">
+                                <i class="nav-icon fas fa-map-marked-alt"></i>
+                                <p>
+                                    Log IP
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a href="{{ URL::to('/admin-logout') }}" class="nav-link">
                                 <i class="nav-icon far fa-circle text-danger"></i>
                                 <p class="text">Đăng xuất</p>
