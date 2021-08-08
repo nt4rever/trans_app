@@ -180,15 +180,15 @@
                                 <i class="fas fa-chevron-right"></i>
                                 <div class="media-body">Chúng tôi cam kết mức giá chúng tôi đưa ra là hợp lý và cạnh tranh
                                     nhất. Quý khách hàng có thể tham khảo Báo giá hoặc gọi ngay cho chúng tôi theo số
-                                    0947688883 để nhận báo giá miễn phí từ các chuyên gia tư vấn.</div>
+                                    0336757208 để nhận báo giá miễn phí từ các chuyên gia tư vấn.</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-chevron-right"></i>
-                                <div class="media-body">Hotline: 0947.688.883 – 0963.918.438</div>
+                                <div class="media-body">Hotline: 0336757208</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-chevron-right"></i>
-                                <div class="media-body">Email: info@dichthuatmientrung.com.vn</div>
+                                <div class="media-body">Email: dichthuat.nmt@gmail.com</div>
                             </li>
                         </ul>
                         <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox">Dịch vụ</a>
@@ -224,13 +224,13 @@
                             <i class="fas fa-chevron-right"></i>
                             <a href="{{ URL::to('/service-detail/' . $item->service_slug) }}" target="_blank"
                                 rel="noopener noreferrer">
-                               
+
                                 <div class="media-body">{{ $item->service_name }}</div>
                             </a>
                         </li>
                     @endforeach
                 </ul>
-                <a class="btn-solid-reg mfp-close page-scroll" href="{{URL::to('/contact')}}">Liên hệ</a> <button
+                <a class="btn-solid-reg mfp-close page-scroll" href="{{ URL::to('/contact') }}">Liên hệ</a> <button
                     class="btn-outline-reg mfp-close as-button" type="button">Quay lại</button>
             </div> <!-- end of col -->
         </div> <!-- end of row -->
@@ -432,110 +432,30 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading">Pricing options for all budgets</h2>
-                    <p class="p-heading">Our pricing plans are setup in such a way that any user can start enjoying Pavo
-                        without worrying so much about costs. They are flexible and work for any type of industry</p>
+                    <h2 class="h2-heading">Dịch vụ nổi bật</h2>
+                    <p class="p-heading">Các dịch vụ được khách hàng quan tâm nhiều nhất</p>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
             <div class="row">
                 <div class="col-lg-12">
-
-                    <!-- Card-->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">STANDARD</div>
-                            <div class="price"><span class="currency">$</span><span class="value">29</span></div>
-                            <div class="frequency">monthly</div>
-                            <p>This basic package covers the marketing needs of small startups</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">List building and relations</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">Seamless platform integration</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">Great performance on devices</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">Community support and videos</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="#download">Download</a>
+                    @foreach ($service_index as $item)
+                        <!-- Card-->
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title">{{ $item->service_name }}</div>
+                                <div>
+                                    <img src="{{ URL::asset('/uploads/service/' . $item->service_image) }}"
+                                        alt="{{ $item->service_name }}" style="width: 100%; border-radius: 5%">
+                                </div>
+                                <p>{!! $item->service_desc !!}</p>
+                                <div class="button-wrapper">
+                                    <a class="btn-solid-reg page-scroll"
+                                        href="{{ URL::to('/service-detail/' . $item->service_slug) }}">Chi tiết</a>
+                                </div>
                             </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-
-                    <!-- Card-->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">ADVANCED</div>
-                            <div class="price"><span class="currency">$</span><span class="value">39</span></div>
-                            <div class="frequency">monthly</div>
-                            <p>This is a more advanced package suited for medium companies</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">List building and relations</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">Seamless platform integration</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">Great performance on devices</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">Community support and videos</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="#download">Download</a>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-
-                    <!-- Card-->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">COMPLETE</div>
-                            <div class="price"><span class="currency">$</span><span class="value">49</span></div>
-                            <div class="frequency">monthly</div>
-                            <p>This is a comprehensive package designed for big organizations</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">List building and relations</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">Seamless platform integration</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">Great performance on devices</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-chevron-right"></i>
-                                    <div class="media-body">Community support and videos</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="#download">Download</a>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
-
+                        </div> <!-- end of card -->
+                        <!-- end of card -->
+                    @endforeach
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
@@ -557,9 +477,9 @@
                     <div class="text-container">
                         <p>Liên hệ với chúng tôi
                             <br>
-                            SĐT: 0123123213312
+                            SĐT: 0336757208
                             <br>
-                            Email: nmt.dichthuat@gmail.com
+                            Email: dichthuat.nmt@gmail.com
                         </p>
                         <a class="btn-solid-lg popup-with-move-anim" href="#details-lightbox">Dịch vụ</a>
                         <a class="btn-solid-lg secondary" href="{{ URL::to('/contact') }}"></i>Liên hệ</a>

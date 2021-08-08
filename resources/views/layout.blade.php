@@ -112,7 +112,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h4>Liên hệ với chúng tôi khi bạn cần hỗ trợ dịch thuật <a class="purple"
-                            href="mailto:email@domain.com">email@domain.com</a></h4>
+                            href="mailto:dichthuat.nmt@gmail.com">dichthuat.nmt@gmail.com</a></h4>
                     <div class="social-container">
                         <span class="fa-stack">
                             <a href="#your-link">
@@ -158,13 +158,13 @@
             <div class="row">
                 <div class="col-lg-6">
                     <ul class="list-unstyled li-space-lg p-small">
-                        <li><a href="article.html">Article Details</a></li>
-                        <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="{{URL::to('/about')}}">Giới thiệu</a></li>
+                        <li><a href="{{URL::to('/service')}}">Dịch vụ</a></li>
+                        <li><a href="{{URL::to('/contact')}}">Liên hệ</a></li>
                     </ul>
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
-                    <p class="p-small statement">Copyright © <a href="#your-link">Văn phòng dịch thuật Minh Tuệ</a></p>
+                    <p class="p-small statement">Copyright © <a href="{{URL::to('/about')}}">Văn phòng dịch thuật Minh Tuệ</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->

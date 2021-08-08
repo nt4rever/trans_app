@@ -28,7 +28,7 @@ class HomeController extends Controller
             $vistor->ip = $request->ip();
             $vistor->save();
         }
-        $service_index = Service::orderBy('service_order', 'asc')->limit(3)->get();
+        $service_index = Service::orderBy('service_view_count', 'desc')->limit(3)->get();
         return view('pages.index', compact('service_index'))->with('home', 'active');
     }
 
