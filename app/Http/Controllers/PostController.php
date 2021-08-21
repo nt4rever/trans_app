@@ -58,7 +58,7 @@ class PostController extends Controller
             'post_desc' => 'required',
             'post_content' => 'required',
             'post_status' => 'required',
-            'post_image' => 'required',
+            'post_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $post = new Post();
         $post->post_name = $request->post_name;
@@ -120,6 +120,7 @@ class PostController extends Controller
             'post_desc' => 'required',
             'post_content' => 'required',
             'post_status' => 'required',
+            'post_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $post = post::find($id);
 

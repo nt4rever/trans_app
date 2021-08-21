@@ -58,7 +58,7 @@ class ServiceController extends Controller
             'service_desc' => 'required',
             'service_content' => 'required',
             'service_status' => 'required',
-            'service_image' => 'required',
+            'service_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $service = new Service();
         $service->service_name = $request->service_name;
@@ -120,6 +120,7 @@ class ServiceController extends Controller
             'service_desc' => 'required',
             'service_content' => 'required',
             'service_status' => 'required',
+            'service_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $service = Service::find($id);
 

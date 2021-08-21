@@ -58,7 +58,7 @@ class LibraryController extends Controller
             'desc' => 'required',
             'content' => 'required',
             'status' => 'required',
-            'image' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $library = new Library();
         $library->name = $request->name;
@@ -120,6 +120,7 @@ class LibraryController extends Controller
             'desc' => 'required',
             'content' => 'required',
             'status' => 'required',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
         $library = Library::find($id);
 

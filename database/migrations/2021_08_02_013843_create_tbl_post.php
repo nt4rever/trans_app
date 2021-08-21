@@ -18,12 +18,12 @@ class CreateTblPost extends Migration
             $table->string('post_name');
             $table->text('post_desc');
             $table->string('post_image');
-            $table->text('post_content');
+            $table->longText('post_content');
             $table->text('post_meta_data')->nullable();
             $table->string('post_keyword')->nullable();
             $table->tinyInteger('post_status')->default(0);
             $table->integer('post_order')->default(0);
-            $table->tinyInteger('post_view_count')->default(0);
+            $table->integer('post_view_count')->default(0);
             $table->string('post_slug');
             $table->timestamps();
         });

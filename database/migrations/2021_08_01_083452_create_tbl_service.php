@@ -18,12 +18,12 @@ class CreateTblService extends Migration
             $table->string('service_name');
             $table->text('service_desc');
             $table->string('service_image');
-            $table->text('service_content');
+            $table->longText('service_content');
             $table->text('service_meta_data')->nullable();
             $table->string('service_keyword')->nullable();
             $table->tinyInteger('service_status')->default(0);
             $table->integer('service_order')->default(0);
-            $table->tinyInteger('service_view_count')->default(0);
+            $table->integer('service_view_count')->default(0);
             $table->string('service_slug');
             $table->timestamps();
         });

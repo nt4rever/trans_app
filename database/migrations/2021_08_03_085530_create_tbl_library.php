@@ -18,12 +18,12 @@ class CreateTblLibrary extends Migration
             $table->string('name');
             $table->text('desc');
             $table->string('image');
-            $table->text('content');
+            $table->longText('content');
             $table->text('meta_data')->nullable();
             $table->string('keyword')->nullable();
             $table->tinyInteger('status')->default(0);
             $table->integer('order')->default(0);
-            $table->tinyInteger('view_count')->default(0);
+            $table->integer('view_count')->default(0);
             $table->string('slug');
             $table->timestamps();
         });

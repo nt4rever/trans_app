@@ -28,7 +28,7 @@ class HomeController extends Controller
             $vistor->ip = $request->ip();
             $vistor->save();
         }
-        $service_index = Service::orderBy('service_view_count', 'desc')->limit(3)->get();
+        $service_index = Service::where("service_status", 0)->orderBy('service_view_count', 'desc')->limit(3)->get();
         return view('pages.index', compact('service_index'))->with('home', 'active');
     }
 
@@ -40,13 +40,13 @@ class HomeController extends Controller
 
     public function service()
     {
-        $service = Service::orderBy('service_order', 'asc')->paginate(9);
+        $service = Service::where('service_status', 0)->orderBy('service_order', 'asc')->paginate(9);
         return view('pages.service')->with('service', $service);
     }
 
     public function service_detail($slug)
     {
-        $service = Service::where('service_slug', $slug)->firstOrFail();
+        $service = Service::where('service_slug', $slug)->where('service_status', 0)->firstOrFail();
         $service->service_view_count = $service->service_view_count + 1;
         $service->save();
         return view('pages.service_detail')->with('service', $service);
@@ -54,13 +54,13 @@ class HomeController extends Controller
 
     public function post()
     {
-        $post = Post::orderBy('post_order', 'asc')->paginate(9);
+        $post = Post::where('post_status', 0)->orderBy('post_order', 'asc')->paginate(9);
         return view('pages.post')->with('post', $post);
     }
 
     public function post_detail($slug)
     {
-        $post = Post::where('post_slug', $slug)->firstOrFail();
+        $post = Post::where('post_slug', $slug)->where('post_status', 0)->firstOrFail();
         $post->post_view_count = $post->post_view_count + 1;
         $post->save();
         return view('pages.post_detail')->with('post', $post);
@@ -103,13 +103,13 @@ class HomeController extends Controller
 
     public function library()
     {
-        $library = Library::orderBy('order', 'asc')->paginate(9);
+        $library = Library::where('status', 0)->orderBy('order', 'asc')->paginate(9);
         return view('pages.library')->with('library', $library);
     }
 
     public function library_detail($slug)
     {
-        $library = Library::where('slug', $slug)->firstOrFail();
+        $library = Library::where('slug', $slug)->where('status', 0)->firstOrFail();
         $library->view_count =  $library->view_count + 1;
         $library->save();
         return view('pages.library_detail')->with('library', $library);
