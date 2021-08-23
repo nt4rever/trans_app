@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\URL;
 | contains the "web" middleware group. Now create something great!
 |
 */
-URL::forceScheme('https');
+// URL::forceScheme('https');
 Route::get('lang/{locale}', function ($locale) {
     if (!in_array($locale, ['vi', 'en'])) {
         abort(404);
