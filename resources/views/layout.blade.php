@@ -36,7 +36,7 @@
     <link rel="icon" href="{{ URL::asset('frontend/images/favicon.png') }}">
 </head>
 
-<body data-spy="scroll" data-target=".fixed-top">
+<body data-spy="" data-target=".fixed-top">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-light">

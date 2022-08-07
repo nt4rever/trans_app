@@ -9,8 +9,9 @@ use App\Http\Controllers\PriceController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\VisitorController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\URL;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +23,7 @@ use Illuminate\Support\Facades\URL;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// URL::forceScheme('https');
+
 Route::get('lang/{locale}', function ($locale) {
     if (!in_array($locale, ['vi', 'en'])) {
         abort(404);
@@ -30,6 +31,7 @@ Route::get('lang/{locale}', function ($locale) {
     session()->put('locale', $locale);
     return redirect()->back();
 });
+
 Route::get('/dashboard', [AuthController::class, 'show_dashboard']);
 Route::get('/admin', [AuthController::class, 'login_auth']);
 Route::get('/login-auth', [AuthController::class, 'login_auth']);
@@ -101,3 +103,4 @@ Route::post('/send-contact', [HomeController::class, 'send_contact']);
 Route::get('/about', [HomeController::class, 'about']);
 Route::get('/library', [HomeController::class, 'library']);
 Route::get('/library-detail/{slug}', [HomeController::class, 'library_detail']);
+Route::post('/about', [HomeController::class, 'about']);
